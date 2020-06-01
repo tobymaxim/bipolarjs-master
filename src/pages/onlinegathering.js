@@ -9,10 +9,9 @@ import Nextdates from "../components/Nextdates"
 const WarehouseravePage = ({ data }) => (
 
   <Layout data={data}>
-    <SEO title="Warehouse Rave NYE" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Bipølar. - Beyond the Veil" keywords={[`gatsby`, `application`, `react`]} />
     <div className="main-container">
       <div className="left-container">
-      <div className="blackbox"><h1 className="headline1">Bipølar. - Online Gathering</h1></div>
         <div className="artists-images-container">{data.allWordpressPage.edges.map(post =>
             <div className="eventvideo">
               {post.node.acf && post.node.acf.youtube_iframe &&
@@ -45,6 +44,7 @@ const WarehouseravePage = ({ data }) => (
                     <div className="artist-credits" dangerouslySetInnerHTML={{ __html: post.node.acf && post.node.acf.credits }} />}
                 </div>
                 <div className="artists-container-right">
+                <h2 className="post-title2">BIPØLAR. – BEYOND THE VEIL</h2>
                   <div className="events-post-content" dangerouslySetInnerHTML={{ __html: post.node.content }} />
                   <div className="artist-tag-container">
                     {post.node.acf && post.node.acf.tag_1 &&
@@ -67,14 +67,11 @@ const WarehouseravePage = ({ data }) => (
       </div>
       <div className="right-container">
         <div>
-        <div className="blackbox-imagegallery">
-            <h1 className="headline1">Images</h1>
-          </div>
           <ul className="imagegallery-ul" style={{ listStyle: "none" }}>{data.allWordpressPage.edges.map(post =>
             (
               <div>
                 {post.node.acf.image_1.localFile && post.node.acf.image_1.localFile.url &&
-                  <li className="imagegallery-li"><a href={post.node.acf.image_1.localFile.url} target="_blank" rel="noopener noreferrer"><img className="artist-imagegallery" src={post.node.acf.image_1.localFile.url} alt="" /></a></li>}
+                  <li className="imagegallery-li"><a href={post.node.acf.image_1.localFile.url} target="_blank" rel="noopener noreferrer"><img className="artist-imagegallery2" src={post.node.acf.image_1.localFile.url} alt="" /></a></li>}
                 {post.node.acf.image_2.localFile && post.node.acf.image_2.localFile.url &&
                   <li className="imagegallery-li"><a href={post.node.acf.image_2.localFile.url} target="_blank" rel="noopener noreferrer"><img className="artist-imagegallery" src={post.node.acf.image_2.localFile.url} alt="" /></a></li>}
                 {post.node.acf.image_3.localFile && post.node.acf.image_3.localFile.url &&
@@ -101,6 +98,7 @@ export const query = graphql`
     allWordpressPage(filter: {template: {eq: "tpl-events.php"}, title: {eq: "Online Gathering"}}) {
       edges {
         node {
+          title
           featured_media {
             localFile {
               url

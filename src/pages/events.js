@@ -21,7 +21,7 @@ const EventsPage = ({ data }) => (
 
             <div className="images-column">
                 <figure>
-                  <a href="../onlinegathering"><img className="artists-images" src="http://54499171.swh.strato-hosting.eu/bipolarjs/wp-content/uploads/2020/05/online-gathering-post-1-1.png" alt="" />
+                  <a href="../onlinegathering"><img className="artists-images" src="http://54499171.swh.strato-hosting.eu/bipolarjs/wp-content/uploads/2020/06/bipolar_beyond-the-veil.jpg" alt="" />
                     <figcaption className="artists-caption">Bipølar. - Online Gathering</figcaption>
                   </a>
                 </figure>
