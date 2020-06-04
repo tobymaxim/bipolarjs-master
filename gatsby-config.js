@@ -123,6 +123,6 @@ module.exports = {
         trackingId: "UA-102210248-1",
       },
     },
-    
+    `gatsby-plugin-client-side-redirect`,
   ],
 }

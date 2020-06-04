@@ -8,7 +8,8 @@
 const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+  createRedirect({ fromPath: '/news', toPath: '/', isPermanent: true })
   const BlogPostTemplate = path.resolve("./src/templates/BlogPost.js")
   const PageTemplate = path.resolve("./src/templates/Page.js")
 
